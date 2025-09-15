@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="content">
+        <div class="title">
+            <p>Rock Paper Scissor</p>
+        </div>
+
+        <div class="butt">
+            <button
+            onclick="
+                    choice = 'Rock';
+                    console.log('Player: ', choice);
+                    console.log('Computer: ', compMove);
+
+                    if (compMove === 'Rock'){
+                        console.log('Tie');
+                        result = 'It\'s a tie';
+                    } else if (compMove === 'Paper') {
+                        console.log('You lose!');
+                        result = 'You lose';
+                    } else if (compMove === 'Scissors') {
+                        console.log('You win!');
+                        result = 'You win';
+                    }
+
+                    alert(`You picked rock. Computer picked ${compMove}. ${result}!`);
+
+                "
+            >
+            Rock
+            </button>
+
+            <button
+            onclick="
+                    choice = 'Paper';
+                    console.log('Player: ', choice);
+                    console.log('Computer: ', compMove);
+
+                    if (compMove === 'Rock'){
+                        console.log('Win');
+                        result = 'You win';
+                    } else if (compMove === 'Paper') {
+                        console.log('Tie!');
+                        result = 'It\'s a tie';
+                    } else if (compMove === 'Scissors') {
+                        console.log('You lose!');
+                        result = 'You lose';
+                    }
+
+                    alert(`You picked paper. Computer picked ${compMove}. ${result}!`);
+                    
+                "
+            >
+            Paper
+            </button>
+
+            <button
+            onclick="
+                    choice = 'Scissors';
+                    console.log('Player: ', choice);
+                    console.log('Computer: ', compMove);
+
+                    if (compMove === 'Rock'){
+                        console.log('Lose');
+                        result = 'You lose';
+                    } else if (compMove === 'Paper') {
+                        console.log('Win!');
+                        result = 'You win';
+                    } else if (compMove === 'Scissors') {
+                        console.log('Tie!');
+                        result = 'It\'s a tie';
+                    }
+
+                    alert(`You picked scissors. Computer picked ${compMove}. ${result}!`);
+                    
+                "
+            >
+            Scissors
+            </button>
+        </div>
+    </div>
+
+    <script>
+      let choice;
+      let result;
+      let scissors;
+      let paper;
+      let rock;
+      const compChoice = Math.random();
+      let compMove;
+
+      if (compChoice >= 0 && compChoice < 1 / 3) {
+        compMove = "Rock";
+      } else if (compChoice >= 1 / 3 && compChoice < 2 / 3) {
+        compMove = "Paper";
+      } else if (compChoice >= 2 / 3 && compChoice < 1) {
+        compMove = "Scissors";
+      }
+    </script>
+  </body>
+</html>
